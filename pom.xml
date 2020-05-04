@@ -34,6 +34,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>sonatype-staging</id>
+            <url>https://oss.sonatype.org/content/repositories/staging/</url>
+        </repository>
+    </distributionManagement>
+
     <profiles>
         <profile>
             <id>sign-pgp</id>
