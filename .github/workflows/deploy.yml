@@ -25,4 +25,4 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Publish to Sonatype Staging
-      run: mvn javadoc:jar source:jar deploy -s $GITHUB_WORKSPACE/settings.xml -Dgpg.passphrase=${{ secrets.PGP_PASSPHRASE }}
+      run: mvn javadoc:jar source:jar deploy -s $GITHUB_WORKSPACE/settings.xml -Dgpg.passphrase="${{ secrets.PGP_PASSPHRASE }}"
