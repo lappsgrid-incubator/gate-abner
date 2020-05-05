@@ -7,6 +7,36 @@
     <artifactId>gate-abner</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
+    <name>LAPPS GATE/Abner</name>
+    <description>GATE Abner tagger as a LAPPS library</description>
+    <url>https://github.com/lappsgrid-incubator/gate-abner</url>
+    <licenses>
+        <license>
+            <name>The Apache License. Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Keith Suderman</name>
+            <email>suderman@cs.vassar.edu</email>
+            <organization>The Language Applications Grid</organization>
+            <organizationUrl>https://www.lappsgrid.org</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://github.com/lappsgrid-incubator/gate-abner</url>
+        <connection>scm:git:https://github.com/lappsgrid-incubator/gate-abner.git</connection>
+        <developerConnection>scm:git:https://github.com/lappsgrid-incubator/gate-abner.git</developerConnection>
+    </scm>
+    <issueManagement>
+        <url>https://github.com/lappsgrid-incubator/gate-abner/issues</url>
+        <system>GitHub issues</system>
+    </issueManagement>
+    <ciManagement>
+        <url>https://travis-ci.org/lappsgrid-incubator/gate-abner</url>
+        <system>travis</system>
+    </ciManagement>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>

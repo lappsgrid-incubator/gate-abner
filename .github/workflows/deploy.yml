@@ -4,8 +4,8 @@ name: Maven Package
 
 on:
   push:
-    branches: 
-     - release/**
+    branches:
+     - never
 
 jobs:
   build:
@@ -23,6 +23,8 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Save the private key
+      run: echo $PGP_KEY > ~/.gnupg/key.gpg
 
     - name: Publish to Sonatype Staging
-      run: mvn javadoc:jar source:jar deploy -s $GITHUB_WORKSPACE/settings.xml -Dgpg.passphrase=${{ secrets.PGP_PASSPHRASE }}
+      run: mvn javadoc:jar source:jar deploy -s $GITHUB_WORKSPACE/settings.xml -Dgpg.passphrase="${{ secrets.PGP_PASSPHRASE }}" -Dgpg.secretKeyring=./key.gpg
